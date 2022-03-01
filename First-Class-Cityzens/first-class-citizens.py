@@ -12,7 +12,7 @@ def square(x):
     """
     Retrieve the square of a number
     """
-    return x * x
+    return x ** 2
 
 
 # Assign a function to a variable

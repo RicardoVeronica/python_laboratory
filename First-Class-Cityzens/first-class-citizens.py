@@ -38,7 +38,7 @@ def cube(x):
 # Pass a function like an argument of another function
 def my_map(func, arg_list):
     """
-    Retrurn the arg_list apply the func in first arg
+    Returns the arg_list applying it the func of first arg
     """
     result = []
 
@@ -48,8 +48,8 @@ def my_map(func, arg_list):
     return result
 
 
-squares = my_map(cube, [2, 3, 4, 5, 6])
-print(f'This is the result for my_map function: {squares}')
+my_func = my_map(cube, [2, 3, 4, 5, 6])
+print(f'This is the result for my_map function: {my_func}')
 
 print('\n---\n')
 
@@ -68,12 +68,12 @@ log_hi()
 print('\n---\n')
 
 
-# Return a function for another function, html example
+# Return a function as a result of another function
 def html(tag):
-    def wrap_txt(msg):
+    def inner(msg):
         print(f'<{tag}>{msg}</{tag}>')
 
-    return wrap_txt
+    return inner
 
 
 h1 = html('h1')
